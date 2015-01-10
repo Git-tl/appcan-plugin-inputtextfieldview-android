@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+
+    
+    <plugin
+        className="org.zywx.wbpalmstar.plugin.uexinput.EUExInput"
+        uexName="uexInput"  version="3.0" build="0">
+        <method name="create" />
+        <method name="clearText" />
+        <method name="close" />
+    </plugin>
+
+</uexplugins>

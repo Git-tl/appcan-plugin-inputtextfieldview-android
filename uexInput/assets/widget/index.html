@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=no" /><link rel="stylesheet" type="text/css" href="css/index.css">
+<title>无标题文档</title>
+<script type="text/javascript">
+window.uexOnAuthorize = function(authId){
+        alert("uexOnAuthorize ="+authId);
+};
+	//alert("test1234");
+	window.uexOnload = function(){
+        //alert("hello");
+        //alert("hello");
+		//if(0 == 0){  
+			//uexWidget.setMySpaceInfo("result", "1", "");
+			//uexConsole.log("window.uexOnload");
+			//uexWindow.alert("dfdfdf","dfdf","1111");
+		//	alert(uexWidgetOne.platformName+""+uexWidgetOne.platformVersion);
+			//uexWindow.closeSlibing("1");
+			//uexWindow.closeSlibing("2");
+			xmlHttpGet();
+			uexDataAnalysis.cbGetAuthorizeID = getAuthorizeID;
+        //内存警告 调用
+            uexWidgetOne.onMemoryWarning=function(isWarning,level){
+              //  alert("warning");
+                //alert("isWarning"+isWarning+"level"+level);
+            };
+        
+		//}
+	}
+	function xmlHttpGet(){
+		var url = "http://211.157.108.145/9888quan/rpc/member.php?mod=logging&ac=login&username=15801621166&password=111111&macaddress=98:03:D8:EE:C7:07&deviceToken=&platform=0&manufacturer=Apple&version=1.0";
+	//	alert(url);
+		uexXmlHttpMgr.open("1", "get", url, "");
+		uexXmlHttpMgr.send("1");
+	//	alert("send");
+	}
+	function openNewWindow(src){
+		uexWindow.open(src,'0',src,0,'','',0x0);
+	}
+
+    window.uexStart = function(){
+       // alert("启动测试");
+        uexLottery.startReport("aaaa","bbbb");
+        uexLottery.userEvent("1000");
+        
+    };
+	 function getAuthorizeID(opCode,dataType,data){
+        alert("uexDataAnalysis.cbGetAuthorizeID="+data);
+    }
+    function aaa(){
+        alert("hello");
+        //alert("uexGameEngine.screenWidth"+uexGameEngine.screenWidth);
+        alert("platfom="+uexWidgetOne.platformVersion);
+    }
+</script>
+</head>
+
+<body>
+	<div class="tit">DeviceAPI接口测试例子</div>
+	<div class="con">
+        <input type="button" value="platformVersion" onclick="aaa();"></input>		
+   		<a href="uexInput.html">输入框功能</a>
+	</div>
+</body>
+</html>
